@@ -11,15 +11,15 @@ $LocalPath = Split-Path -parent $script:MyInvocation.MyCommand.Path;
 $Startup = "$Env:USERPROFILE\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup";
 
 # Location of the AutoHotKey script that will be referenced by shortcut.
-$TargetFile = "$LocalPath\clipboard.ahk";
+$TargetPath = "$LocalPath\clipboard.ahk";
 
 # Location of the shortcut thats being created.
-$ShortcutFile = "$Startup\clipboard.lnk";
+$ShortcutPath = "$Startup\clipboard.lnk";
 
 # Create the shortcut object
-$Shortcut = (New-Object -ComObject WScript.Shell).CreateShortcut($ShortcutFile);
+$Shortcut = (New-Object -ComObject WScript.Shell).CreateShortcut($ShortcutPath);
 $Shortcut.WorkingDirectory = $LocalPath;
-$Shortcut.TargetPath = $TargetFile;
+$Shortcut.TargetPath = $TargetPath;
 $Shortcut.Save();
 
-Invoke-Item $ShortcutFile
+Invoke-Item $ShortcutPath
