@@ -22,4 +22,4 @@ $Shortcut.WorkingDirectory = $LocalPath;
 $Shortcut.TargetPath = $TargetPath;
 $Shortcut.Save();
 
-Invoke-Item $ShortcutPath
+Invoke-Item $ShortcutPath;
