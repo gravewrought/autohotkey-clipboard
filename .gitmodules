@@ -1,0 +1,3 @@
+[submodule "include/WinHttpRequest"]
+	path = include/WinHttpRequest
+	url = https://gist.github.com/181c8eb57b48c744a7c0a7e8228b4b0d.git
