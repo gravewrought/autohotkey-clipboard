@@ -21,3 +21,5 @@ $Shortcut = (New-Object -ComObject WScript.Shell).CreateShortcut($ShortcutFile);
 $Shortcut.WorkingDirectory = $LocalPath;
 $Shortcut.TargetPath = $TargetFile;
 $Shortcut.Save();
+
+Invoke-Item $ShortcutFile
