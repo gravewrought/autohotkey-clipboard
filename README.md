@@ -10,6 +10,23 @@ transfer using modern web technologies, such as SSH/TLS/HTTPS.
 
 This project compliments the **clipboard** node project which can be found here: https://github.com/gravewrought/clipboard
 
+## Environment
+
+When the script is triggered, **autohotkey-clipboard** uses the environment variable `ClipboardUrl` (`%%ClipboardUrl%%`)
+to determine what endpoint to call.
+
+To set this variable in CMD run:
+```
+SETX ClipboardUrl http://example.com
+```
+
+To set this variable in PowerShell run:
+```
+[environment]::SetEnvironmentVariable("ClipboardUrl", "http://example.com", "User")
+```
+
+Where `http://example.com` is the endpoint that the scrpit should call.
+
 ## Installation
 
 An `install.ps1` script is included to properly install the script.  As the project is for AutoHotKey, and
